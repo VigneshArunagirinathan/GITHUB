@@ -24,8 +24,8 @@ public static String getdata(int rw,int cl) throws Throwable
 	FileInputStream io=new FileInputStream(f);
 	Workbook w=new XSSFWorkbook(io);
 	Sheet st = w.getSheet("Sheet1");
-		Row r = st.getRow(rw);
-		Cell c = r.getCell(cl);
+	//	Row r = st.getRow(rw);
+	//	Cell c = r.getCell(cl);
 		int cty = c.getCellType();
 		if(cty==1)
 		{
