@@ -24,20 +24,20 @@ public static String getdata(int rw,int cl) throws Throwable
 	FileInputStream io=new FileInputStream(f);
 	Workbook w=new XSSFWorkbook(io);
 	Sheet st = w.getSheet("Sheet1");
-		Row r = st.getRow(rw);
-		Cell c = r.getCell(cl);
+	//	Row r = st.getRow(rw);
+	//	Cell c = r.getCell(cl);
 		int cty = c.getCellType();
 		if(cty==1)
 		{
 			value = c.getStringCellValue();
 		}
-	//	else if(cty==0)
+	else if(cty==0)
 		{
 			if(DateUtil.isCellDateFormatted(c))
 			{
-//		Date dd = c.getDateCellValue();
+	Date dd = c.getDateCellValue();
 		SimpleDateFormat ss=new SimpleDateFormat();
-	//	 value = ss.format(dd);
+	 value = ss.format(dd);
 			}
 			else
 			{
