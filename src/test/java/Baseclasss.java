@@ -31,13 +31,13 @@ public static String getdata(int rw,int cl) throws Throwable
 		{
 			value = c.getStringCellValue();
 		}
-	//	else if(cty==0)
+	else if(cty==0)
 		{
 			if(DateUtil.isCellDateFormatted(c))
 			{
-//		Date dd = c.getDateCellValue();
+	Date dd = c.getDateCellValue();
 		SimpleDateFormat ss=new SimpleDateFormat();
-	//	 value = ss.format(dd);
+	 value = ss.format(dd);
 			}
 			else
 			{
